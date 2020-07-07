@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'Playfair Display', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  background-image: url('/images/matt-lamers-SPbcqTVoYqE-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 20% 100%, 0 85%);
+  animation: moveLeft 0.8s ease;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+nav {
+  margin: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-links li {
+  margin: 0.5rem 0;
+}
+
+.nav_link {
+  font-size: 3rem;
+  color: white;
+  font-weight: 900;
+  transition: all 0.7s ease-in-out;
+}
+
+.nav_link:hover {
+  color: red;
+}
+.logo {
+  margin: 2rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  animation: spin 0.5s ease alternate-reverse;
+}
+.logo h2 {
+  letter-spacing: 0.5rem;
+  color: white;
+}
+
+/****description***/
+.description {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 4rem 6rem;
+  background: white;
+  position: absolute;
+  top: -6%;
+  right: -6%;
+  text-align: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 98% 1%, 100% 90%, 100% 100%);
+  animation: moveLeft 0.8s ease;
+}
+
+.description h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 50px;
+  text-align: right;
+  width: 50%;
+  color: #0d0d0d;
+  margin-bottom: 2rem;
+}
+
+.description P {
+  text-align: right;
+  font-family: Podkova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  width: 30%;
+}
+
+.read-more {
+  margin-top: 1rem;
+  color: #0d0d0d;
+  font-size: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+.read-more:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes moveLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .description {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .description h1 {
+    font-size: 1rem;
+  }
+  .description p {
+    font-size: 0.5rem;
+  }
+}
