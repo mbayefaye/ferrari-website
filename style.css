@@ -47,13 +47,16 @@ nav {
 
 .nav-links li {
   margin: 0.5rem 0;
+  transition: transform 0.7s ease-in-out;
 }
 
+.nav-links li:hover {
+  transform: translateY(-2px);
+}
 .nav_link {
   font-size: 3rem;
   color: white;
   font-weight: 900;
-  transition: all 0.7s ease-in-out;
 }
 
 .nav_link:hover {
